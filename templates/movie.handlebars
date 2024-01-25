@@ -1,0 +1,9 @@
+<article class="movie">
+  {{#if movie.attributes.image }}
+  <img src="{{ movie.attributes.image.url }}">
+  {{/if }}
+  <div class="info">
+    <h1>{{ movie.attributes.title }}</h1>
+    {{{  markdownedIntro }}}
+  </div>
+</article>
