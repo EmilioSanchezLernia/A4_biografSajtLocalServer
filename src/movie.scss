@@ -1,0 +1,17 @@
+.movie {
+  display: flex;
+
+  .info {
+    color: $colorFive;
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    padding: 0px 20px 20px;
+  }
+
+  img {
+    max-width: 16rem;
+    padding: 0px 20px 20px;
+  }
+}
