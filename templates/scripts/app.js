@@ -49,7 +49,6 @@ app.get("/", async (request, response) => {
 app.get("/filmer", async (request, response) => {
   const movies = await loadMovies();
   response.render("filmer", { movies });
-  renderPage(response, "filmer");
 });
 
 app.get("/ourHistory", async (request, response) => {
@@ -64,7 +63,6 @@ app.get("/filmer/:movieId", async (request, response) => {
   const movie = await loadMovie(request.params.movieId);
   const markdownedIntro = marked(movie.attributes.intro);
   response.render("movie", { movie, markdownedIntro });
-  renderPage(response, "filmer");
 });
 
 app.use("/static", express.static("./static"));

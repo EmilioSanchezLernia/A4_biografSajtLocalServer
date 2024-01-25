@@ -21,7 +21,6 @@ for (const data of testData) {
       .get(`/filmer/${data.id}`)
       .expect("Content-Type", "text/html; charset=utf-8")
       .expect(200);
-
-    expect(response.text).toMatch(`${data.title}`);
+    expect(response.text).toContain(data.title);
   });
 }
